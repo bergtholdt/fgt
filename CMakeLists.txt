@@ -123,8 +123,10 @@ install(FILES
     DESTINATION include
     )
 install(TARGETS Library-C++
-    DESTINATION lib
     EXPORT fgt-targets
+    RUNTIME DESTINATION bin 
+    LIBRARY DESTINATION lib 
+    ARCHIVE DESTINATION lib 
     )
 
 configure_file(Doxyfile.in ${PROJECT_BINARY_DIR}/Doxyfile)
